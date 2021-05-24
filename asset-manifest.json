@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-deploy-xray/static/css/main.ab80607a.chunk.css",
-    "main.js": "/react-deploy-xray/static/js/main.6f80a77b.chunk.js",
-    "main.js.map": "/react-deploy-xray/static/js/main.6f80a77b.chunk.js.map",
+    "main.js": "/react-deploy-xray/static/js/main.d36b5bb1.chunk.js",
+    "main.js.map": "/react-deploy-xray/static/js/main.d36b5bb1.chunk.js.map",
     "runtime-main.js": "/react-deploy-xray/static/js/runtime-main.d4ccf72d.js",
     "runtime-main.js.map": "/react-deploy-xray/static/js/runtime-main.d4ccf72d.js.map",
     "static/js/2.073d5de5.chunk.js": "/react-deploy-xray/static/js/2.073d5de5.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/react-deploy-xray/index.html",
     "static/css/main.ab80607a.chunk.css.map": "/react-deploy-xray/static/css/main.ab80607a.chunk.css.map",
     "static/js/2.073d5de5.chunk.js.LICENSE.txt": "/react-deploy-xray/static/js/2.073d5de5.chunk.js.LICENSE.txt",
-    "static/media/img12.63d98b4d.png": "/react-deploy-xray/static/media/img12.63d98b4d.png",
-    "static/media/img2.09314abe.png": "/react-deploy-xray/static/media/img2.09314abe.png"
+    "static/media/img11.6addca63.png": "/react-deploy-xray/static/media/img11.6addca63.png",
+    "static/media/img12.ae8f99fa.png": "/react-deploy-xray/static/media/img12.ae8f99fa.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d4ccf72d.js",
     "static/js/2.073d5de5.chunk.js",
     "static/css/main.ab80607a.chunk.css",
-    "static/js/main.6f80a77b.chunk.js"
+    "static/js/main.d36b5bb1.chunk.js"
   ]
 }
