@@ -159,8 +159,8 @@ export default class XRay extends Component{
 
     HoverSensor = (event) => {
 
-        let positionX = event.layerX ;
-        let positionY = event.layerY ;
+        let positionX = event.nativeEvent.layerX;
+        let positionY = event.nativeEvent.layerY;
         console.log("x" + event.layerX);
         console.log("y" + event.layerY);
         let {sensor, dim, beyond} = this.state;
@@ -203,7 +203,6 @@ export default class XRay extends Component{
             this.zoom.style.left = `${position.endX - dim - zoomPosition}px`;
             this.lastImg.style.left = `${-position.endX +  dim + zoomPosition}px`;
         }
-        this.setState({centerX:event.layerX,centerY:event.layerY});
        // console.log(this.zoom.style.left + ' xx  ' + positionX + ' endxx' + position.endX);
         //console.log(this.zoom.style.top + ' yy ' + positionY + 'endyy' + position.endY);
     };
@@ -224,40 +223,32 @@ export default class XRay extends Component{
         this.HoverSensor(event);
     };
     onLeftPress = () =>{
-        if(this.state.centerX-Math.round(this.state.dim/2)<=0)
-        {   return ;
-        }
-        this.move({
-            layerX:this.state.centerX-10,
+        const obj={nativeEvent:{layerX:this.state.centerX-250,
             layerY:this.state.centerY
-            });
+        }
+        };
+        this.move(obj);
     }
     onRightPress = () =>{
-        if(this.state.centerX >=Math.round(this.state.width)+Math.round(this.state.dim/2))
-        {   return ;
+        const obj={nativeEvent:{layerX:this.state.centerX-220,
+            layerY:this.state.centerY+120
         }
-        this.move({
-            layerX:this.state.centerX+10,
-            layerY:this.state.centerY
-            });
+        };
+        this.move(obj);
     }
     onTopPress = () =>{
-        if(this.state.centerY-Math.round(this.state.dim/2)<=0)
-        {   return ;
+        const obj={nativeEvent:{layerX:this.state.centerX+300,
+            layerY:this.state.centerY+100
         }
-        this.move({
-            layerX:this.state.centerX,
-            layerY:this.state.centerY-10
-            });
+        };
+        this.move(obj);
     }
     onBottomPress = () =>{
-        if(this.state.centerY >=Math.round(this.state.height)+Math.round(this.state.dim/2))
-        {   return ;
+        const obj={nativeEvent:{layerX:this.state.centerX+230,
+            layerY:this.state.centerY+130
         }
-        this.move({
-            layerX:this.state.centerX,
-            layerY:this.state.centerY+10
-                    });
+        };
+        this.move(obj);
     }
     render(){
         let {
@@ -323,13 +314,13 @@ export default class XRay extends Component{
                         />
                     </div>
                 </div>
-                {/* <div className="x-ray-sensor" style={sensor} onMouseMove={this.move}></div> */}
+                <div className="x-ray-sensor" style={sensor} onMouseMove={this.move}></div>
             </div>
             <div className="Buttons">
-                <Button clicked={this.onLeftPress}>Left</Button>
-                <Button clicked={this.onRightPress}>Right</Button>
-                <Button clicked={this.onBottomPress}>Bottom</Button>
-                <Button clicked={this.onTopPress}>Top</Button>
+                <Button clicked={this.onLeftPress}>Top rear</Button>
+                <Button clicked={this.onRightPress}>Rear wheels</Button>
+                <Button clicked={this.onBottomPress}>Front Wheels</Button>
+                <Button clicked={this.onTopPress}>Headlights</Button>
             </div>
             </Aux>
         );
