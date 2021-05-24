@@ -27,7 +27,7 @@ export default class XRay extends Component {
       resize: this.props.resize || [
         {
           screen: 1199,
-          diameter: 200,
+          diameter: 250,
         },
         {
           screen: 991,
@@ -35,11 +35,11 @@ export default class XRay extends Component {
         },
         {
           screen: 767,
-          diameter: 100,
+          diameter: 120,
         },
         {
           screen: 575,
-          diameter: 50,
+          diameter: 70,
         },
       ],
       centerX: 0,
