@@ -14,16 +14,6 @@ class XrayConfigurator extends Component {
         responsive={true}
         type={"circle"}
         backgroundColor={"#00AAFF"}
-        resize={[
-          {
-            screen: 1199,
-            diameter: 100,
-          },
-          {
-            screen: 991,
-            diameter: 50,
-          },
-        ]}
       />
     );
   }

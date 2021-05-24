@@ -27,15 +27,15 @@ export default class XRay extends Component {
       resize: this.props.resize || [
         {
           screen: 1199,
-          diameter: 130,
+          diameter: 200,
         },
         {
           screen: 991,
-          diameter: 100,
+          diameter: 150,
         },
         {
           screen: 767,
-          diameter: 80,
+          diameter: 100,
         },
         {
           screen: 575,
@@ -83,6 +83,7 @@ export default class XRay extends Component {
     if (this.firstImg === null) {
       this.setState({ centerX: 0 });
       setTimeout(this.updateWidthHeight, 2000);
+      return ;
     }
     let naturalWidth = this.firstImg.naturalWidth;
     let naturalHeight = this.firstImg.naturalHeight;
